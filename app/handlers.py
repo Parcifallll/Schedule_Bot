@@ -44,7 +44,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "1 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 1 группы",
+    await message.answer("Расписание 1 группы",
                          reply_markup=first_group)
 
 @router.message(F.text == "Понедельник_1")
@@ -79,7 +79,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "2 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 2 группы",
+    await message.answer("Расписание 2 группы",
                          reply_markup=second_group)
 
 @router.message(F.text == "Понедельник_2")
@@ -114,7 +114,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "3 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 3 группы",
+    await message.answer("Расписание 3 группы",
                          reply_markup=third_group)
 
 @router.message(F.text == "Понедельник_3")
@@ -149,7 +149,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "4 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 4 группы",
+    await message.answer("Расписание 4 группы",
                          reply_markup=fourth_group) 
 
 @router.message(F.text == "Понедельник_4")
@@ -184,7 +184,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "5 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 5 группы",
+    await message.answer("Расписание 5 группы",
                          reply_markup=fifth_group)
 
 @router.message(F.text == "Понедельник_5")
@@ -219,7 +219,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "6 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 6 группы",
+    await message.answer("Расписание 6 группы",
                          reply_markup=sixth_group)
 
 @router.message(F.text == "Понедельник_6")
@@ -254,7 +254,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "7 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 7 группы",
+    await message.answer("Расписание 7 группы",
                          reply_markup=seventh_group)
 
 @router.message(F.text == "Понедельник_7")
@@ -289,7 +289,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "8 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 8 группы",
+    await message.answer("Расписание 8 группы",
                          reply_markup=eighth_group)
 
 @router.message(F.text == "Понедельник_8")
@@ -324,7 +324,7 @@ async def cmd_start(message: Message):
 
 @router.message(F.text == "9 группа")
 async def cmd_start(message: Message):
-    await message.answer("Распеса 9 группы",
+    await message.answer("Расписание 9 группы",
                          reply_markup=ninth_group)
 
 @router.message(F.text == "Понедельник_9")
