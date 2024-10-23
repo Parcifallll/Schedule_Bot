@@ -152,9 +152,9 @@ def parser_main(username, datee):
     for row in worksheet.iter_rows(min_row=min_row, max_row=max_row, min_col=min_col, max_col=max_col):
 
         lessontime = lesson_num_to_time(l_num)
-        subject = 'N/A'
-        stype = 'N/A'
-        location = 'N/A'
+        subject = ''
+        stype = ''
+        location = ''
 
         subjectstring = strikethrough_clear(row[0])
         locationstring = strikethrough_clear(row[1])
@@ -176,7 +176,7 @@ def parser_main(username, datee):
                         elif ('семинар' in ss) or ('практическое занятие' in ss):
                             stype = 'семинар'
                         else:
-                            stype = 'N/A'
+                            stype = ''
 
         elif ('\n\n' in subjectstring) and ('\n\n' in locationstring):
 
@@ -194,7 +194,7 @@ def parser_main(username, datee):
                         elif ('семинар' in ss) or ('практическое занятие' in ss):
                             stype = 'семинар'
                         else:
-                            stype = 'N/A'
+                            stype = ''
 
 
         else:
@@ -208,7 +208,7 @@ def parser_main(username, datee):
                     elif ('семинар' in ss) or ('практическое занятие' in ss):
                         stype = 'семинар'
                     else:
-                        stype = 'N/A'
+                        stype = ''
         l_num += 1
         schedule_list.append(
             {'l_num': l_num, 'time': lessontime, 'subject': subject, 'stype': stype, 'location': location})
