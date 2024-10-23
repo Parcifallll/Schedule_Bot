@@ -145,7 +145,7 @@ def parser_main(username, datee):
             max_row = 73
 
     if day_of_the_week == 4:
-        l_num = 7
+        l_num = 6
     else:
         l_num = 0
 
