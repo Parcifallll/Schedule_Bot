@@ -24,8 +24,12 @@ async def cmd_start(message: Message):
         data[message.chat.username] = {'group': group, 'week': 0}
     with open("users.json", "w") as file:
         dump(data, file)
+    date1 = date.today() - timedelta(days=date.today().weekday()) + timedelta(
+        days=data[message.chat.username]['week'] * 7)
+    date2 = date.today() - timedelta(days=date.today().weekday()) + timedelta(days=5) + timedelta(
+        days=data[message.chat.username]['week'] * 7)
     await message.answer(
-        f"Выбери дату ({date.today() - timedelta(days=date.today().weekday()) + timedelta(days=data[message.chat.username]['week'] * 7)} - {date.today() - timedelta(days=date.today().weekday()) + timedelta(days=5) + timedelta(days=data[message.chat.username]['week'] * 7)}):",
+        f"Выбери дату ({date1.day}-{date1.month}-{date1.year} - {date2.day}-{date2.month}-{date2.year}):",
         reply_markup=date_and_day_of_the_week)
 
 
@@ -43,8 +47,12 @@ async def cmd_start(message: Message):
                                        'week': data[message.chat.username]['week'] - 1}
     with open("users.json", "w") as file:
         dump(data, file)
+    date1 = date.today() - timedelta(days=date.today().weekday()) + timedelta(
+        days=data[message.chat.username]['week'] * 7)
+    date2 = date.today() - timedelta(days=date.today().weekday()) + timedelta(days=5) + timedelta(
+        days=data[message.chat.username]['week'] * 7)
     await message.answer(
-        f"Выбери дату ({date.today() - timedelta(days=date.today().weekday()) + timedelta(days=data[message.chat.username]['week'] * 7)} - {date.today() - timedelta(days=date.today().weekday()) + timedelta(days=5) + timedelta(days=data[message.chat.username]['week'] * 7)}):",
+        f"Выбери дату ({date1.day}-{date1.month}-{date1.year} - {date2.day}-{date2.month}-{date2.year}):",
         reply_markup=date_and_day_of_the_week)
 
 
@@ -56,8 +64,12 @@ async def cmd_start(message: Message):
                                        'week': data[message.chat.username]['week'] + 1}
     with open("users.json", "w") as file:
         dump(data, file)
+    date1 = date.today() - timedelta(days=date.today().weekday()) + timedelta(
+        days=data[message.chat.username]['week'] * 7)
+    date2 = date.today() - timedelta(days=date.today().weekday()) + timedelta(days=5) + timedelta(
+        days=data[message.chat.username]['week'] * 7)
     await message.answer(
-        f"Выбери дату ({date.today() - timedelta(days=date.today().weekday()) + timedelta(days=data[message.chat.username]['week'] * 7)} - {date.today() - timedelta(days=date.today().weekday()) + timedelta(days=5) + timedelta(days=data[message.chat.username]['week'] * 7)}):",
+        f"Выбери дату ({date1.day}-{date1.month}-{date1.year} - {date2.day}-{date2.month}-{date2.year}):",
         reply_markup=date_and_day_of_the_week)
 
 
